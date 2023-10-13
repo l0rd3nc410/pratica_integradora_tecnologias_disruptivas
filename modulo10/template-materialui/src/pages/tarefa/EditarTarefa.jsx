@@ -79,19 +79,21 @@ const EditarTarefa = ({handleCloseEditar, idTarefaSelecionada, tarefas, tarefa, 
           maxWidth: '100%',
         }}>
           <Grid item xs={12}>
+          <FormHelperText id="tarefa_titulo_helper_text">Título da Tarefa</FormHelperText>
             <FormControl fullWidth>
               <Input id="tarefa_titulo" aria-describedby="tarefa_titulo_helper_text" value={tituloTarefa} onChange={e => { setTituloTarefa(e.target.value) }} />
-              <FormHelperText id="tarefa_titulo_helper_text">Título da Tarefa.</FormHelperText>
             </FormControl>
           </Grid>
           <Grid item xs={12}>  
+          <FormHelperText id="tarefa_descricao_helper_text">Descrição da Tarefa</FormHelperText>
             <FormControl fullWidth>
               <Input id="tarefa_descricao" aria-describedby="tarefa_descricao_helper_text" value={descricaoTarefa} onChange={e => { setDescricaoTarefa(e.target.value) }} />
-              <FormHelperText id="tarefa_descricao_helper_text">Descrição da Tarefa.</FormHelperText>
+              
             </FormControl>
           </Grid>
           <Grid container spacing={2} mt={1}>
             <Grid item xs={3}>  
+            <FormHelperText id="tarefa_inicio_helper_text">Início da Tarefa</FormHelperText>
               <FormControl>
                 <Input id="tarefa_inicio" type="date" aria-describedby="tarefa_inicio_helper_text" value={inicioTarefa} onChange={e => { setInicioTarefa(e.target.value) }}
                   sx={{
@@ -100,10 +102,11 @@ const EditarTarefa = ({handleCloseEditar, idTarefaSelecionada, tarefas, tarefa, 
                     paddingLeft:'13px'
                   }} 
                 />
-                <FormHelperText id="tarefa_inicio_helper_text">Início da Tarefa.</FormHelperText>
+                
               </FormControl>
             </Grid>  
             <Grid item xs={3}>  
+            <FormHelperText id="tarefa_fim_helper_text">Fim da Tarefa</FormHelperText>
               <FormControl>
                 <Input id="tarefa_fim" type="date" aria-describedby="tarefa_fim_helper_text" value={fimTarefa} onChange={e => { setFimTarefa(e.target.value) }}
                   sx={{
@@ -112,7 +115,7 @@ const EditarTarefa = ({handleCloseEditar, idTarefaSelecionada, tarefas, tarefa, 
                     paddingLeft:'13px'
                   }} 
                 />
-                <FormHelperText id="tarefa_fim_helper_text">Fim da Tarefa.</FormHelperText>
+                
               </FormControl>
             </Grid>
             <Grid item xs={3}>  
@@ -158,6 +161,9 @@ const EditarTarefa = ({handleCloseEditar, idTarefaSelecionada, tarefas, tarefa, 
             <Grid container spacing={2} pl={2} mt={2}>
               <Grid item xs={1}>
                 <Button size="small" variant="contained" onClick={handleEditar}>Salvar</Button>
+              </Grid>  
+              <Grid item xs={1}>
+                
               </Grid>  
               <Grid item xs={1}>  
                 <Button size="small" variant="outlined" onClick={handleCloseEditar}>Cancelar</Button>  
